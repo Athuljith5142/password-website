@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 90vh;
+    background-color: #121212; 
+    flex-wrap: wrap;
+}
+
+.display {
+    background-color: #1e1e1e;
+    border-radius: 16px;
+    padding: 35px 30px;
+    width: 400px;
+    height: 12rem;
+    margin-top: 30px;
+    box-shadow: 0 10px 25px rgba(223, 222, 219, 0.877);
+    text-align: center;
+    color: #ffffff;
+}
+
+.t1 {
+    border: 2px solid #32CD32; 
+    padding: 10px;
+    height: 30px;
+    width: 87%;
+    border-radius: 5px;
+    outline: none;
+    background-color: #2a2a2a; 
+    color: #ffffff; 
+}
+
+.b1 {
+    
+    width: 65%;
+    height: 38px;
+    border-radius: 5px;
+    border: none;
+    background-color: #32CD32; 
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 12px;
+    transition: background 0.3s ease, transform 0.2s, box-shadow 0.3s;
+}
+.b2{
+    width: 25%;
+    height: 38px;
+    border-radius: 5px;
+    border: none;
+    background-color: #32CD32; 
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-left: 2px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s, box-shadow 0.3s;   
+}
+
+.b1:hover {
+    transform: scale(1.05);
+    background-color: #28a745;
+    box-shadow: 0 8px 16px rgba(50, 205, 50, 0.4);
+}
+.b2:hover{
+    transform: scale(1.05);
+    background-color: #28a745;
+    box-shadow: 0 8px 16px rgba(50, 205, 50, 0.4);   
+}
+
+.h1 {
+    margin-top: 1.5rem;
+    font-size: 3rem;
+    text-align: center;
+    font-weight: bold;
+    color: #ffffff;
+    margin-left: .5rem;
+   
+    
+
+}
+
+span {
+    color: #00FF7F; 
+}
+.ig{
+    position: absolute;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    margin-left: 20.6rem;
+    margin-bottom: 14px;
+    background-color:transparent;
+    border: 0;
+}
+
+.wall{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 26px 20px;
+    
+
+
+}
