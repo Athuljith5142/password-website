@@ -1,24 +1,51 @@
-# 🔐 Random Password Generator
+# Password Security Analyzer
 
-A sleek, responsive, and lightweight web application that generates strong random passwords with a single click. Built using **HTML**, **CSS**, and **JavaScript**, it features copy-to-clipboard functionality and a modern UI.
-
-
-
----
-
-## 🚀 Features
-
-- ✅ **Instant Password Generation** (12 characters)
-- 📋 **One-Click Copy to Clipboard**
-- 🧹 **Clear Textbox Button**
-- 💡 Modern **Dark Mode** UI
-- ⚡ Smooth button hover transitions
+A simple password security checker built using HTML, CSS, and JavaScript.  
+This project analyzes password strength in real time and helps users create safer and stronger passwords.
 
 ---
 
-## 🛠️ Tech Stack
+## Features
 
-- **HTML5** – Markup Structure
-- **CSS3** – Styling & Layout
-- **JavaScript (Vanilla)** – Core Logic & Interactivity
+- Real-time password strength checking
+- Detects weak password patterns
+- Shows password score and strength level
+- Estimates password crack time
+- Gives security tips and recommendations
+- Generates strong password suggestions
+- Copy password to clipboard
+- Cyber-style responsive UI
+- Local interactive terminal log
 
+---
+
+## Built With
+
+- HTML5
+- CSS3
+- JavaScript
+
+---
+
+## Gallery
+
+<table>
+  <tr>
+    <td><img src="Assest/img-1.png" width="100%"></td>
+    <td><img src="gitimages/img2.png" width="100%"></td>
+  </tr>
+
+  <tr>
+    <td><img src="gitimages/img3.png" width="100%"></td>
+    <td><img src="gitimages/img4.png" width="100%"></td>
+  </tr>
+</table>
+
+---
+
+## Files
+
+```bash
+pass.html
+style.css
+script.js
