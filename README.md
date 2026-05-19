@@ -1,7 +1,9 @@
 # Password Security Analyzer
-
+<p align=justify>
 A simple password security checker built using HTML, CSS, and JavaScript.  
 This project analyzes password strength in real time and helps users create safer and stronger passwords.
+</p>
+
 
 ---
 
@@ -32,6 +34,7 @@ This project analyzes password strength in real time and helps users create safe
 <table>
   <tr>
     <td><img src="./Assests/img-1.png" width="100%"></td>
+    <td><img src="./Assests/img-2-2.png" width="100%"></td>
     <td><img src="./Assests/img-2.png" width="100%"></td>
   </tr>
   <tr>
