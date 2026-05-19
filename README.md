@@ -27,17 +27,16 @@ This project analyzes password strength in real time and helps users create safe
 
 ---
 
-## Gallery
+<h2>Gallery</h2>
 
 <table>
   <tr>
-    <td><img src="Assest/img-1.png" width="100%"></td>
-    <td><img src="gitimages/img2.png" width="100%"></td>
+    <td><img src="./Assests/img-1.png" width="100%"></td>
+    <td><img src="./Assests/img-2.png" width="100%"></td>
   </tr>
-
   <tr>
-    <td><img src="gitimages/img3.png" width="100%"></td>
-    <td><img src="gitimages/img4.png" width="100%"></td>
+    <td><img src="./Assests/img-3.png" width="100%"></td>
+    <td><img src="./Assests/img-4.png" width="100%"></td>
   </tr>
 </table>
 
