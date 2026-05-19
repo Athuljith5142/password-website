@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Security Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cyber-bg" aria-hidden="true">
+        <span class="scanline"></span>
+        <div class="matrix" id="matrix"></div>
+    </div>
+
+    <main class="shell">
+        <section class="hero" aria-labelledby="app-title">
+            <div class="title-lock" aria-hidden="true">
+                <svg viewBox="0 0 24 24" role="img">
+                    <path d="M12 2 4.8 5.2v5.6c0 4.4 2.9 8.5 7.2 10 4.3-1.5 7.2-5.6 7.2-10V5.2L12 2Z"/>
+                    <path d="M9 11V8.8a3 3 0 0 1 6 0V11"/>
+                    <path d="M8.2 11h7.6v5H8.2z"/>
+                </svg>
+            </div>
+            <div>
+                <p class="eyebrow">Ethical Security Utility</p>
+                <h1 id="app-title">Password Security Analyzer</h1>
+                <p class="subtitle">Audit any password in real time, detect attack-friendly patterns, and generate compatible stronger alternatives for strict school or company systems.</p>
+            </div>
+        </section>
+
+        <section class="cyber-panel scanner-panel" aria-label="Password security analyzer">
+            <div class="panel-glow" aria-hidden="true"></div>
+
+            <div class="input-row">
+                <label class="sr-only" for="passwordInput">Enter password to analyze</label>
+                <input id="passwordInput" class="password-input" type="password" placeholder="Enter a password to scan..." autocomplete="new-password" spellcheck="false">
+                <div class="icon-cluster" aria-label="Password controls">
+                    <button class="icon-btn" id="toggleVisibility" type="button" aria-label="Show password" title="Show password">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"/>
+                            <circle cx="12" cy="12" r="2.8"/>
+                        </svg>
+                    </button>
+                    <button class="icon-btn" id="analyzeNow" type="button" aria-label="Analyze now" title="Analyze now">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4z"/>
+                            <path d="M16 15h4M18 13v4M14 20l6-6"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="status-strip" id="typingStatus">Scanning Password Security...</div>
+
+            <div class="strength-grid">
+                <article class="score-card">
+                    <div class="score-ring" id="scoreRing" aria-label="Security score">
+                        <span id="scoreValue">0</span>
+                    </div>
+                    <div>
+                        <p class="metric-label">Security Score</p>
+                        <strong id="strengthLabel">Awaiting Input</strong>
+                        <span id="entropyValue">0 bits entropy</span>
+                    </div>
+                </article>
+
+                <article class="meter-card">
+                    <div class="meter-header">
+                        <span>Estimated Crack Time</span>
+                        <strong id="crackTime">No password entered</strong>
+                    </div>
+                    <div class="meter-track" aria-hidden="true">
+                        <span class="meter-fill" id="strengthFill"></span>
+                    </div>
+                    <p id="analysisText">Type a password to start live analysis.</p>
+                </article>
+            </div>
+
+            <div class="toggle-row">
+                <label class="switch-card">
+                    <input type="checkbox" id="restrictedMode">
+                    <span class="switch-ui"></span>
+                    <span>
+                        <strong>Restricted Length Security Mode</strong>
+                    <small>Optimize advice for 4-5 character limits without special symbols.</small>
+                    </span>
+                </label>
+                <button class="primary-btn" id="generateAlternative" type="button">
+                    <span class="btn-pulse" aria-hidden="true"></span>
+                    Apply Secure Alternative
+                </button>
+            </div>
+        </section>
+
+        <section class="dashboard-grid" aria-label="Security analysis results">
+            <article class="glass-panel">
+                <div class="section-head">
+                    <h2>Attack Pattern Detection</h2>
+                    <span id="findingCount">0 findings</span>
+                </div>
+                <ul id="findingsList" class="analysis-list"></ul>
+            </article>
+
+            <article class="glass-panel">
+                <div class="section-head">
+                    <h2>Security Recommendations</h2>
+                    <span id="recommendationCount">0 tips</span>
+                </div>
+                <ul id="recommendationsList" class="analysis-list"></ul>
+            </article>
+        </section>
+
+        <section class="dashboard-grid lower-grid" aria-label="Suggestions and logs">
+            <article class="glass-panel suggestion-panel">
+                <div class="section-head">
+                    <h2>Input-Based Secure Suggestion</h2>
+                    <button class="copy-link" id="copySuggestion" type="button">Copy Suggestion</button>
+                </div>
+                <div class="suggestion-output" id="suggestionOutput">Awaiting scan...</div>
+                <div class="conversion-grid" aria-label="Short password examples">
+                    <div><span>admin</span><strong>ADm1N</strong></div>
+                    <div><span>school</span><strong>SCh0L</strong></div>
+                    <div><span>login</span><strong>L0g1N</strong></div>
+                </div>
+            </article>
+
+            <article class="glass-panel tips-panel">
+                <div class="section-head">
+                    <h2>Restricted Mode Playbook</h2>
+                    <span>4-5 chars</span>
+                </div>
+                <ul class="tips-list">
+                    <li>Use mixed casing so plain words stop matching dictionary attacks.</li>
+                    <li>Prefer number substitution when symbols are blocked: o to 0, i to 1, e to 3, t to 7.</li>
+                    <li>Avoid obvious endings like 1, 12, 123, or birth-year fragments.</li>
+                    <li>Randomize the pattern instead of following readable word order.</li>
+                </ul>
+            </article>
+
+            <article class="terminal-panel">
+                <div class="terminal-top">
+                    <span></span><span></span><span></span>
+                    <strong>password-analyzer.log</strong>
+                </div>
+                <div id="terminalLog" class="terminal-log" aria-live="polite"></div>
+            </article>
+        </section>
+
+        <section class="cyber-panel defense-panel" aria-label="Brute force defense controls">
+            <div class="section-head">
+                <h2>Brute Force Defense Simulator</h2>
+                <span id="defenseLevel">0% protected</span>
+            </div>
+            <div class="defense-meter" aria-hidden="true">
+                <span id="defenseFill"></span>
+            </div>
+            <div class="defense-grid">
+                <label class="defense-card">
+                    <input type="checkbox" class="defense-control" value="20" data-name="Rate limiting">
+                    <span>Rate Limiting</span>
+                    <small>Slow repeated login attempts per account or IP.</small>
+                </label>
+                <label class="defense-card">
+                    <input type="checkbox" class="defense-control" value="18" data-name="Temporary lockout">
+                    <span>Temporary Lockout</span>
+                    <small>Pause login after repeated failures.</small>
+                </label>
+                <label class="defense-card">
+                    <input type="checkbox" class="defense-control" value="24" data-name="MFA">
+                    <span>MFA / OTP</span>
+                    <small>Require a second factor after password entry.</small>
+                </label>
+                <label class="defense-card">
+                    <input type="checkbox" class="defense-control" value="14" data-name="Breached password blocking">
+                    <span>Breached Password Block</span>
+                    <small>Reject passwords found in leaked lists.</small>
+                </label>
+                <label class="defense-card">
+                    <input type="checkbox" class="defense-control" value="12" data-name="Login monitoring">
+                    <span>Login Monitoring</span>
+                    <small>Detect abnormal failures and credential stuffing.</small>
+                </label>
+                <label class="defense-card">
+                    <input type="checkbox" class="defense-control" value="12" data-name="Strong password hashing">
+                    <span>Argon2id / bcrypt Hashing</span>
+                    <small>Protect accounts if the database is leaked.</small>
+                </label>
+            </div>
+            <div class="defense-result" id="defenseResult">Enable defenses to see brute-force protection guidance.</div>
+        </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite">Secure suggestion copied</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
